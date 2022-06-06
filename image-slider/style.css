@@ -77,3 +77,31 @@ button {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+/* dots */
+#dots {
+    position: absolute;
+    left: 50%;
+    top: 96%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: rgb(187, 184, 184);
+}
+
+.dot:hover {
+    background-color: gray;
+}
+
+.dot-currentImage {
+    background-color: gray;
+}
