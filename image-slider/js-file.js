@@ -58,6 +58,7 @@ function createImg(className, source) {
     const img = document.createElement('img');
     img.classList.add(className);
     img.classList.add('displayImage');
+    img.classList.add('fade-in');
     img.src = source;
     return img;
 }

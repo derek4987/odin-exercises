@@ -1,6 +1,4 @@
-:root {
-    /* min-height: 100vh; */
-}
+/* CSS styling */
 
 html {
     font-family: 'Courier New', Courier, monospace;
@@ -21,13 +19,13 @@ button {
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
-    z-index: 3
+    z-index: 3;
+    border: 3px solid gray;
 }
 
 #imageFrame {
     height: 427px;
     width: 640px;
-    border: 3px solid gray;
     background-color: rgb(175, 162, 162);
     display: flex;
     justify-content: center;
@@ -68,4 +66,14 @@ button {
 
 #leftArrow:hover, #rightArrow:hover {
     opacity: 0.7;
+}
+
+/* fade in effect */
+.fade-in {
+    animation: fadeIn 0.75s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
