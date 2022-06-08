@@ -9,6 +9,29 @@
     <title>JS Form Validation</title>
 </head>
 <body>
-
+    <div id="formContainer">
+        <form action="example.com/path" method="post">
+            <fieldset class="form-fieldset">
+                <input type="email" id="email" class="input">
+                <label for="email" class="emailLabel">E-MAIL ADDRESS</label>                
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <input type="text" id="country" class="input">
+                <label for="country">COUNTRY</label>                
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <input type="text" id="zipCode" class="input">
+                <label for="zipCode">ZIP CODE</label>                
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <input type="password" id="password" class="input">
+                <label for="password">PASSWORD</label>                
+            </fieldset>
+            <fieldset class="form-fieldset">
+                <input type="password" id="confirmPassword" class="input">
+                <label for="confirmPassword">RE-ENTER PASSWORD</label>                
+            </fieldset>
+        </form>
+    </div>
 </body>
 </html>
