@@ -12,27 +12,32 @@
     <div id="formContainer">
         <form action="example.com/path" method="post">
             <fieldset class="form-fieldset">
-                <input type="email" id="email" class="input">
-                <label for="email" class="emailLabel">E-MAIL ADDRESS</label>                
+                <input type="email" id="email" class="input" required>
+                <label for="email" class="emailLabel">E-MAIL ADDRESS</label>
+                <span class="error"></span>                
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="text" id="country" class="input">
-                <label for="country">COUNTRY</label>                
+                <input type="text" id="country" class="input" required>
+                <label for="country">COUNTRY</label>
+                <span class="error"></span>                 
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="text" id="zipCode" class="input">
-                <label for="zipCode">ZIP CODE</label>                
+                <input type="text" id="zipCode" class="input" required>
+                <label for="zipCode">ZIP CODE</label>
+                <span class="error"></span>                 
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="password" id="password" class="input">
-                <label for="password">PASSWORD</label>                
+                <input type="password" id="password" class="input" required>
+                <label for="password">PASSWORD</label>
+                <span class="error"></span>                 
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="password" id="confirmPassword" class="input">
-                <label for="confirmPassword">RE-ENTER PASSWORD</label>                
+                <input type="password" id="confirmPassword" class="input" required>
+                <label for="confirmPassword">RE-ENTER PASSWORD</label>   
+                <span class="error"></span>              
             </fieldset>
             <div id="buttons">
-                <button type="button">submit</button>
+                <button>submit</button>
                 <button type="reset">clear</button>
             </div>
         </form>
