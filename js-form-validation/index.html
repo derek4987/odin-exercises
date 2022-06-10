@@ -10,34 +10,34 @@
 </head>
 <body>
     <div id="formContainer">
-        <form action="example.com/path" method="post">
+        <form id="form" action="example.com/path" method="post">
             <fieldset class="form-fieldset">
-                <input type="email" id="email" class="input" required>
+                <input type="text" id="email" class="input" autocomplete="off">
                 <label for="email" class="emailLabel">E-MAIL ADDRESS</label>
-                <span class="error"></span>                
+                <span class="errorMessage"></span>                
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="text" id="country" class="input" required>
+                <input type="text" id="country" class="input">
                 <label for="country">COUNTRY</label>
-                <span class="error"></span>                 
+                <span class="errorMessage"></span>                 
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="text" id="zipCode" class="input" required>
+                <input type="text" id="zipCode" class="input">
                 <label for="zipCode">ZIP CODE</label>
-                <span class="error"></span>                 
+                <span class="errorMessage"></span>                 
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="password" id="password" class="input" required>
+                <input type="password" id="password" class="input">
                 <label for="password">PASSWORD</label>
-                <span class="error"></span>                 
+                <span class="errorMessage"></span>                 
             </fieldset>
             <fieldset class="form-fieldset">
-                <input type="password" id="confirmPassword" class="input" required>
+                <input type="password" id="confirmPassword" class="input">
                 <label for="confirmPassword">RE-ENTER PASSWORD</label>   
-                <span class="error"></span>              
+                <span class="errorMessage"></span>              
             </fieldset>
             <div id="buttons">
-                <button>submit</button>
+                <button type="submit">submit</button>
                 <button type="reset">clear</button>
             </div>
         </form>

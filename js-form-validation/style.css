@@ -88,19 +88,20 @@ form {
 }
 
 /* style for invalid fields */
-input:invalid {
-    /* border-color: #900; */
+.success {
+    color: rgb(211, 202, 202);
+}
+
+.error {
+    color: #900;
 }
 
 /* style of error message */
-.error {
-    width: 100%;
-    padding: 0px;
+.errorMessage {
+    max-width: 300px;
     font-size: 1rem;
-    color: white;
-    background-color: #900;    
-}
-
-.error:active {
-    /* padding: 5px; */
+    color: #900;
+    font-weight: 500;
+    margin-top: 3px;
+    overflow-wrap: break-word;
 }
