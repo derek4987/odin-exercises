@@ -5,22 +5,68 @@
   <title>Document</title>
 </head>
 <body>
-  <img src="#">
+  <div class="container">
+    <div class="searchBar">
+      <input type="text" id="search">
+      <button type="button" class="searchButton">Search</button>
+    </div>
+    <img src="#">
+  </div>
   <script>
     const img = document.querySelector('img');
-    fetch('https://api.giphy.com/v1/gifs/translate?api_key=HjfXDcqumjAuAYJaUa4cyhfTiT9WSrls&s=cats', 
-    { mode:"cors" })
+    let defaultValue = 'cats';
+    loadgif(defaultValue);
+
+    function loadgif(value) {
+      fetch(`https://api.giphy.com/v1/gifs/translate?api_key=HjfXDcqumjAuAYJaUa4cyhfTiT9WSrls&s=${value}`, 
+      { mode:"cors" })
         .then(function(response) {
-            return response.json();
+          return response.json();
         })
         .then(function(response) {
-            img.src = response.data.images.original.url;
-            console.log(img.src);
+          img.src = response.data.images.original.url;
+          console.log(img.src);
         })
         .catch(function() {
-            // add default image or message to DOM if it fails
-            console.log('Cannot retrieve data');
+          // add default image or message to DOM if it fails
+          console.log('Cannot retrieve data');
         });
+      }
+    
+    const seachButton = document.querySelector('.searchButton');
+    seachButton.addEventListener('click', function(e) {
+      search();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key ==='Enter') {
+        search();
+      }
+    });
+
+    function search() {
+      let searchValue = document.querySelector('#search').value;
+      searchValue = searchValue.split(' ').join('+');
+      loadgif(searchValue);
+    }
   </script>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 250px;
+      gap: 20px;
+      align-items: center;
+    }
+    .searchBar {
+      display: flex;
+    }
+    #search {
+      width: 200px;
+    }
+  </style>
 </body>
 </html>
