@@ -1,11 +1,25 @@
 // 1. A capitalize function that takes a string and returns it with the first character capitalized
 function capitalize(string) {
-
+    if (typeof string === 'string') {
+        const firstL = string.slice(0, 1).toUpperCase();
+        const remaining = string.slice(1);
+        const result = firstL.concat(remaining);
+        return result;
+    } else {
+        alert('please enter a string');
+    }
 }
 
 // 2. A reverseString function that takes a string and returns it reversed.
 function reverseString(string) {
-
+    if (typeof string === 'string') {
+        const splitString = string.split('');
+        const reverseArray = splitString.reverse();
+        const reverseString = reverseArray.join('');
+        return reverseString;    
+    } else {
+        alert('please enter a string');
+    }
 }
 
 /* 3. A calculator object that contains functions for the basic operations: add, subtract, divide, and multiply. 
