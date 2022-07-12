@@ -27,7 +27,24 @@ test('adds 1 + 2 to equal 3', () => {
   expect(add(1, 2)).toBe(3);
 });
 
-// 4. ceaserCipher
+test('subtracts 3 - 2 to equal 1', () => {
+  expect(subtract(3, 2)).toBe(1);
+});
+test('works with negatives -1 - (-2) = 1', () => {
+  expect(subtract(-1, -2)).toBe(1);
+});
 
+test('multiply 3 * 2 to equal 6', () => {
+  expect(multiply(3, 2)).toBe(6);
+});
+
+test('multiply 3 / 2 to equal 1.5', () => {
+  expect(divide(3, 2)).toBe(1.5);
+});
+
+// 4. ceaserCipher
+test('run cipher, turn hello to ifmmp', () => {
+  expect(caesarCipher('hello')).toBe('ifmmp');
+});
 
 // 5. analyzeArray
