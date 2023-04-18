@@ -1,1 +1,1 @@
-// react router exercise module
+<!-- Router exercise from Odin project -->
